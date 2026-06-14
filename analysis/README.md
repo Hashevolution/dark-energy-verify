@@ -1,16 +1,25 @@
 # analysis/
 
-검증 코드. 각 스크립트/노트북은 단일 질문에 답하도록.
+Verification code. One script/notebook per question.
 
-## 계획
+## Plan
 
-- `01_sigma_recompute.py` — 발표된 (w₀, wₐ) 평균·공분산으로
-  (−1, 0)에서의 마할라노비스 거리 = σ 재계산. 세 표본별.
-- `02_chain_load.py` — DESI 공개 MCMC 체인 직접 로드 (경로 B).
-- `03_sample_compare.py` — Pantheon+ / Union3 / DES-SN5YR 차이를
-  통계(크기·z범위) vs 계통(보정 절차)으로 분해.
+- `01_sigma_recompute.py` — From the published (w₀, wₐ) means and covariances,
+  compute the Mahalanobis distance from (−1, 0) — i.e., σ — for each SNe sample.
+- `02_chain_load.py` — Load the public DESI MCMC chains directly (Path B).
+- `03_sample_compare.py` — Decompose Pantheon+ / Union3 / DES-SN5YR differences
+  into statistical (sample size, z-range) vs systematic (calibration) effects.
 
-## 원칙
+## Principle
 
-- 각 결과는 "정규화/측도/데이터선택을 바꿔도 살아남나"를 같이 보고.
-- 흥분되는 패턴 → 더 정밀히 쳐서 아티팩트 판별 (자가반증).
+- Every result is reported alongside a robustness check:
+  *Does it survive a change of normalization, metric, or data selection?*
+- Exciting patterns → tighten the measurement to discriminate signal from
+  artifact (self-falsification).
+
+---
+
+## 한국어
+
+검증 코드. 각 스크립트는 단일 질문에 답한다.
+원칙: 흥분되는 패턴은 믿지 말고 더 정밀히 쳐서 아티팩트인지 확인.

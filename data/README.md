@@ -1,15 +1,21 @@
 # data/
 
-DESI DR2 공개 데이터 보관소.
+DESI DR2 public data store.
 
-## 출처
+## Sources
 
 - DESI Data Release: https://data.desi.lbl.gov/
 - DR2 cosmology products: https://data.desi.lbl.gov/doc/releases/dr2/
-- 관련 논문 부록의 공분산 행렬·체인.
+- Per-paper appendices for covariance matrices and MCMC chains.
 
-## 정책
+## Policy
 
-- 대용량 (체인, FITS) → `.gitignore`로 제외. 로컬에만 둠.
-- 출처 URL·다운로드 명령은 `data/SOURCES.md`에 기록 (재현성).
-- 가공된 작은 요약본 (수십 KB)만 커밋.
+- Large files (chains, FITS) are gitignored — keep them local only.
+- Record download URLs and commands in `data/SOURCES.md` for reproducibility.
+- Commit only small derived summaries (tens of KB).
+
+---
+
+## 한국어
+
+DESI DR2 공개 데이터 보관소. 대용량은 gitignore, 출처는 `SOURCES.md`에 기록.
