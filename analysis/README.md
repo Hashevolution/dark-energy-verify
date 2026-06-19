@@ -18,6 +18,12 @@ Verification code. One script/notebook per question.
   and check whether σ_marginal moves meaningfully.
 - `06_plot_chi2_surface.py` — Three-panel visualization: posterior density
   + n-σ marginal ellipses + LCDM position. Output: `chi2_surface.png`.
+- `07_variation_decompose.py` — Task C′: decompose the inter-sample σ variation
+  into statistical (N, z-range / lever arm) vs systematic (calibration) parts,
+  via (A) counterfactual offset/cov swap, (B) degeneracy-parallel vs orthogonal
+  offset geometry, (C) √N / z_max error scaling. See `07_RESULTS.md`.
+- `07b_decompose_selffalsify.py` — robustness of 07 under the placeholder ρ
+  (which sets the degeneracy axis), the driver split, and ±15% sample counts.
 
 ## Headline findings
 
@@ -31,6 +37,13 @@ Verification code. One script/notebook per question.
   a clean match on Pantheon+ / DES-SN5YR.
 - Burn-in sensitivity (05): max spread 0.035 σ — burn-in is NOT the
   source of the residual gap.
+- Variation decomposition (07, task C′): the 2.8/3.8/4.2 σ spread is
+  dominantly statistical/lever-arm — central-value offsets are ~98% aligned
+  with the (w₀, wₐ) degeneracy axis, and error sizes track N and z_max. Two
+  robust but **sub-2σ** non-statistical residuals: a ≥1σ orthogonal
+  Pantheon+/Union3 offset, and Union3's σ_w0 ~1.9× its √N expectation (its
+  UNITY-Bayesian framework). No >2σ smoking-gun calibration systematic
+  (consistent with 03). Robust to the placeholder ρ and to ±15% N (07b).
 
 ## Principle
 
